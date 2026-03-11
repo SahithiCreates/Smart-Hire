@@ -1,0 +1,80 @@
+.mypostings-wrapper {
+    padding: 20px;
+    background-color: #000;
+    min-height: 90vh;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+}
+
+.mypostings-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.mypostings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.mypostings-table th,
+.mypostings-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.mypostings-table th {
+    background-color: #222;
+    font-size: 1.1rem;
+}
+
+.mypostings-row:hover {
+    background-color: #1a1a1a;
+}
+
+.status-select {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+/* Colors for status */
+.status-select.active {
+    background-color: #4CAF50; /* green */
+}
+
+.status-select.closed {
+    background-color: #dc3545; /* red */
+}
+
+.view-btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f5a623;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.view-btn:hover {
+    transform: translateY(-2px);
+    background-color: #ffc857;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mypostings-table th,
+    .mypostings-table td {
+        padding: 8px 10px;
+    }
+}

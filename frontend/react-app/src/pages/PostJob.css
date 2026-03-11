@@ -1,0 +1,77 @@
+/* Page wrapper */
+.postjob-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #111;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Form styling */
+.postjob-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #111;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.postjob-form:hover {
+    box-shadow: 0 8px 20px rgba(245, 166, 35, 0.5);
+    transform: translateY(-5px);
+}
+
+/* Inputs and textarea */
+.postjob-input {
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    background-color: #111;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.postjob-input::placeholder {
+    color: #bbb;
+}
+
+.postjob-input:focus {
+    border-color: #f5a623;
+    box-shadow: 0 0 5px rgba(245, 166, 35, 0.5);
+}
+
+/* Button */
+.postjob-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.postjob-button:hover {
+    background-color: #f5a623;
+    transform: translateY(-2px);
+    color: #111;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .postjob-form {
+        padding: 20px;
+    }
+}

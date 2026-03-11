@@ -1,0 +1,103 @@
+/* Full screen black background */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Center form */
+.signup-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Form styling */
+/* Form styling */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #111; /* dark gray for form */
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 2px solid #fff; /* added white border */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup-form:hover {
+    transform: translateY(-5px); /* subtle movement */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3); /* white glow on hover */
+}
+
+/* Inputs & select styling */
+.signup-input {
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #222; /* slightly lighter than form bg */
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-input::placeholder {
+    color: #bbb;
+}
+
+.signup-input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 200, 150, 0.7); /* subtle brownish glow */
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Button styling */
+.signup-button {
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.signup-button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* Login link under button */
+/* Center the login text */
+.login-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #fff;
+    text-align: center; /* center text */
+}
+
+/* Style the clickable Login */
+.login-link span {
+    color: #f5a623; /* subtle brown/golden color */
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.login-link span:hover {
+    color: #fff; /* white on hover for contrast */
+    text-decoration: underline;
+}

@@ -1,0 +1,79 @@
+/* Reset everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full height for html, body, root */
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    background-color: #000; /* black background */
+    color: #fff;            /* white text */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Full screen flex wrapper */
+.home-wrapper {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Content container */
+.home-container {
+    width: 100%;
+    max-width: 1200px; /* limit for readability */
+    margin: 0 auto;    /* center block on large screens */
+}
+
+/* Title */
+.home-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Subtitle / description */
+.home-subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* Button */
+.home-button {
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .home-title { font-size: 3.5rem; }
+    .home-subtitle { font-size: 1.8rem; }
+    .home-button { font-size: 1.2rem; padding: 14px 28px; }
+}
+
+@media (max-width: 600px) {
+    .home-title { font-size: 3rem; }
+    .home-subtitle { font-size: 1.5rem; }
+    .home-button { font-size: 1.1rem; padding: 12px 24px; }
+}

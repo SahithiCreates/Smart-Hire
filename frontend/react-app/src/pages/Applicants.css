@@ -1,0 +1,76 @@
+/* Wrapper */
+.applicants-wrapper {
+    padding: 20px;
+    background-color: #000;
+    min-height: 90vh;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+}
+
+.applicants-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Table styling */
+.applicants-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.applicants-table th,
+.applicants-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.applicants-table th {
+    background-color: #111;
+    font-size: 1.1rem;
+}
+
+.applicant-row:hover {
+    background-color: #1a1a1a;
+}
+
+/* Resume link */
+.resume-link {
+    color: #f5a623;
+    text-decoration: none;
+}
+
+.resume-link:hover {
+    text-decoration: underline;
+}
+
+/* Status select */
+.status-select {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+/* Status colors */
+.status-select.applied { background-color: #007bff; }        /* blue */
+.status-select.shortlisted { background-color: #ffc107; }   /* yellow */
+.status-select.rejected { background-color: #dc3545; }      /* red */
+.status-select.selected { background-color: #28a745; }      /* green */
+
+/* Hover for select not needed, color shows status */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .applicants-table th,
+    .applicants-table td {
+        padding: 8px 10px;
+    }
+}

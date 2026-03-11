@@ -1,0 +1,165 @@
+/* Page wrapper */
+.jobs-page-wrapper {
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Header: title + buttons */
+.jobs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Heading centered in available space */
+.jobs-heading {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px 20px 0;
+}
+
+/* Buttons container in top-right */
+.header-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Grid container for JobCards */
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* JobCard styling (same as before) */
+.jobcard-wrapper {
+    background-color: #111;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.3s ease-in-out;
+    max-width: 300px;
+    min-height: 280px;
+}
+
+.jobcard-wrapper:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(245, 166, 35, 0.5);
+}
+
+/* Card content */
+.jobcard-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.jobcard-company {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.jobcard-info {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+.jobcard-description {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.jobcard-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.jobcard-skill {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.jobcard-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    align-self: flex-start;
+}
+
+.jobcard-button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+.jobcard-button.closed {
+    background-color: #555;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .jobcard-wrapper {
+        max-width: 100%;
+    }
+    .jobs-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .jobs-heading {
+        text-align: center;
+        margin: 0;
+    }
+}
+.header-buttons button {
+    padding: 10px 20px;
+    background-color: #fff; /* white button */
+    color: #111;            /* black text */
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-buttons button:hover {
+    border: white;  /* golden hover */
+    color: #111;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(245, 166, 35, 0.5);
+}
+
+/* Optional: Disabled style if needed */
+.header-buttons button:disabled {
+    background-color: #555;
+    color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
