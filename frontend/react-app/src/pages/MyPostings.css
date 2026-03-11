@@ -71,7 +71,6 @@
     background-color: #ffc857;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .mypostings-table th,
     .mypostings-table td {
