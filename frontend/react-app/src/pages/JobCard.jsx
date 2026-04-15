@@ -35,6 +35,13 @@ const JobCard = ({ job, applied, onApplied }) => {
           <span className="jobcard-skill" key={skill}>{skill}</span>
         ))}
       </div>
+      {role==="job_seeker" && (
+        <div>
+      <p className="jobcard-title">Match Score:{job.matchScore}</p>
+      <p className="jobcard-company">Matched Skills : {job.matchedSkills.join(", ")}</p>
+      <p className="jobcard-info">Matched Skills : {job.missedSkills.join(", ")}</p>
+      </div>
+      )}
 
       {role === "job_seeker" && (
         <button

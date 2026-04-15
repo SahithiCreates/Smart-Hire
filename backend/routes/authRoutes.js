@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 
 router.post("/signup",async (req,res)=>{
     try{
-        const {name,email,password,role}=req.body;
+        const {name,email,password,role,skills}=req.body;
         if(!email || !name || !password ||!role){
         return res.status(400).json({message:"Enter Required Credntials"});
         }
@@ -15,7 +15,7 @@ router.post("/signup",async (req,res)=>{
             return res.status(409).json({message:"User exists"});
         }
         const hashedPassword=await bcrypt.hash(password,10);
-        const newUser = await User.create({name,email,password: hashedPassword,role});
+        const newUser = await User.create({name,email,password: hashedPassword,role,skills});
         
         const token=jwt.sign({ userId: newUser._id, role: newUser.role},
             process.env.JWT_SECRET,

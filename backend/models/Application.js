@@ -20,10 +20,6 @@ const appSchema=new mongoose.Schema({
         type:String,
         enum:["applied","shortlisted","rejected","accepted"],
         default:"applied"
-    },
-    matchScore:{
-        type:Number,
-        default :0
     }
 }, 
 {timestamps:true});

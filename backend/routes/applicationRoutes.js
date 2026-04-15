@@ -2,6 +2,7 @@ const express=require("express");
 const Application=require("../models/Application");
 const authMiddleware=require("../middlewares/middleware");
 const Job=require("../models/Job");
+const User=require("../models/User");
 
 const router = express.Router();
 
@@ -75,14 +76,40 @@ router.get("/mypostings",authMiddleware,async (req,res)=>{
 router.get("/mypostings/:jobId", authMiddleware, async (req, res) => {
 
     const { jobId } = req.params;
+    const user = await User.findById(req.user.userId);
+    const job=await Job.findById(jobId);
+    const reqSkills=job.reqSkills;
 
     try {
 
         const applications = await Application
             .find({ jobId })
             .populate("userId", "name email");
+         
+        const appWithScores = await Promise.all(
+  applications.map(async app => {
+      const user = await User.findById(app.userId); // fetch applicant skills
+      const userSkills = user.skills || [];
+      const matched = [];
+      const missed = [];
 
-        return res.status(200).json({ applications });
+      for (let skill of reqSkills) {
+          if (userSkills.includes(skill)) matched.push(skill);
+          else missed.push(skill);
+      }
+
+      const score = (matched.length / reqSkills.length) * 100;
+
+      return {
+          ...app.toObject(),
+          matchScore: score.toFixed(2),
+          matchedSkills: matched,
+          missedSkills: missed
+      };
+  })
+);
+        console.log("sucess");
+        return res.status(200).json({ applications : appWithScores });
 
     }
     catch (err) {

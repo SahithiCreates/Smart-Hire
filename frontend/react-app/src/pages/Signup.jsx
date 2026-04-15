@@ -8,7 +8,8 @@ const Signup = () => {
         name:"",
         email:"",
         password:"",
-        role:"job_seeker"
+        role:"job_seeker",
+        skills:""
     });
     const navigate = useNavigate();
 
@@ -19,7 +20,17 @@ const Signup = () => {
     const handleSignup=async(e)=>{
         e.preventDefault();
         try{
-            const res=await signup(formData);
+            const skillsArray = formData.skills
+            .split(",")
+            .map(skill => skill.trim().toLowerCase())
+            .filter(skill => skill !== "");
+
+            const finalData = {
+            ...formData,
+            skills: skillsArray
+            };
+            console.log(finalData);
+            const res=await signup(finalData);
             localStorage.setItem("token",res.data.token);
             localStorage.setItem("userId", res.data.user.userId);
             localStorage.setItem("role", res.data.user.role);
@@ -61,6 +72,15 @@ const Signup = () => {
                     value={formData.password}
                     onChange={handleChange}
                     required
+                />
+
+                <input
+                    className="signup-input"
+                    type="text"
+                    name="skills"
+                    placeholder="Enter skills (comma seperated)"
+                    value={formData.skills}
+                    onChange={handleChange}
                 />
                 <select className="signup-input" name="role" value={formData.role} onChange={handleChange}>
                     <option value="job_seeker">Job Seeker</option>

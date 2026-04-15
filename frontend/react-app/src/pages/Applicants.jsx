@@ -8,7 +8,10 @@ const Applicants = () => {
   const [applicants, setApplicants] = useState([]);
 
   useEffect(() => {
-    getApplicants(jobId).then(data => setApplicants(data));
+    getApplicants(jobId).then(data =>
+      { const sorted = data.sort((a, b) => b.matchScore - a.matchScore);
+        setApplicants(data);
+      });
   }, [jobId]);
 
   const handleStatusChange = async (appId, newStatus) => {
@@ -36,6 +39,7 @@ const Applicants = () => {
             <th>Email</th>
             <th>Resume</th>
             <th>Status</th>
+            <th>Match Score</th>
           </tr>
         </thead>
         <tbody>
@@ -60,6 +64,7 @@ const Applicants = () => {
                   <option value="selected">Selected</option>
                 </select>
               </td>
+              <td>{app.matchScore}</td>
             </tr>
           ))}
         </tbody>

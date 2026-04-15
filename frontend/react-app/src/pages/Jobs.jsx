@@ -19,7 +19,11 @@ const Jobs = () => {
     const data = await allJobs();
     if (data) {
       // Show only active jobs
+      console.log("in frontebnd");
+      console.log(data);
+      console.log(data[0].matchScore);
       const activeJobs = data.filter((job) => job.status === "active");
+      console.log(activeJobs);
       setJobs(activeJobs);
     }
   };
