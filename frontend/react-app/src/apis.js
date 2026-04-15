@@ -1,13 +1,15 @@
 import axios from "axios";
 
-const API=axios.create({baseURL: "http://localhost:5000/"});
-
+// const API=axios.create({baseURL: "http://localhost:5000/"});
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
 export const signup=(data)=>{
     return API.post("/auth/signup",data);
 }
 
 export const login=(data)=>{
-    return API.post("auth/login",data);
+    return API.post("/auth/login",data);
 }
 
 export const allJobs = async () => {
