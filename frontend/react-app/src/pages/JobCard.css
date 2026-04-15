@@ -1,13 +1,13 @@
-/* Jobs container grid */
+
 .jobs-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 3-4 per row desktop, responsive */
-    gap: 20px;             /* space between cards */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;          
     justify-content: center; 
     padding: 20px;
 }
 
-/* JobCard styling */
+
 .jobcard-wrapper {
     background-color: #111; 
     color: #fff;
@@ -19,44 +19,44 @@
     flex-direction: column;
     justify-content: flex-start;
     transition: all 0.3s ease-in-out;
-    max-width: 300px; /* prevents card from being too wide on large screens */
+    max-width: 300px;
 }
 
 .jobcard-wrapper:hover {
     transform: translateY(-7px);
-    box-shadow: 0 8px 20px rgba(245, 166, 35, 0.5); /* golden-brown shadow */
+    box-shadow: 0 8px 20px rgba(245, 166, 35, 0.5);
 }
 
-/* Title */
+
 .jobcard-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-/* Company */
+
 .jobcard-company {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-/* Location & type */
+
 .jobcard-info {
     font-size: 0.95rem;
     margin-bottom: 10px;
     color: #bbb;
 }
 
-/* Description */
+
 .jobcard-description {
     font-size: 0.95rem;
     margin-bottom: 10px;
     line-height: 1.4;
-    flex-grow: 1; /* takes available space, pushes button down */
+    flex-grow: 1; 
 }
 
-/* Skills container */
+
 .jobcard-skills {
     display: flex;
     flex-wrap: wrap;
@@ -64,7 +64,6 @@
     margin-bottom: 10px;
 }
 
-/* Skill badges */
 .jobcard-skill {
     display: inline-block;
     background-color: #222;
@@ -74,7 +73,6 @@
     font-size: 0.85rem;
 }
 
-/* Apply / Applied / Closed button */
 .jobcard-button {
     padding: 10px 20px;
     font-size: 0.95rem;
@@ -85,7 +83,7 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    align-self: flex-start; /* button aligned to left */
+    align-self: flex-start; 
 }
 
 .jobcard-button:hover {
@@ -93,39 +91,37 @@
     transform: scale(1.05);
 }
 
-/* Closed button style */
+
 .jobcard-button.closed {
     background-color: #555;
     color: #ccc;
     cursor: not-allowed;
 }
 
-/* Responsive tweaks */
 @media (max-width: 768px) {
     .jobcard-wrapper {
         max-width: 100%;
     }
 }
 
-/* Job description scrollable */
+
 .jobcard-description {
     margin-bottom: 20px;
     font-size: 0.95rem;
     margin-bottom: 10px;
     line-height: 1.4;
-    flex-grow: 1; /* push button down */
-    max-height: 100px; /* fixed height */
-    overflow-y: auto; /* vertical scroll */
-    padding-right: 5px; /* so scrollbar doesn’t cover text */
+    flex-grow: 1;
+    max-height: 100px; 
+    overflow-y: auto; 
+    padding-right: 5px; 
 }
 
-/* Optional: nice scrollbar for modern look */
 .jobcard-description::-webkit-scrollbar {
     width: 6px;
 }
 
 .jobcard-description::-webkit-scrollbar-thumb {
-    background-color: #f5a623; /* golden */
+    background-color: #f5a623; 
     border-radius: 3px;
 }
 
