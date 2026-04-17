@@ -59,9 +59,18 @@ Job seeker dashboard for tracking applications
 
 ---
 
-### ⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 Frontend: React.js, Tailwind CSS
 Backend: Node.js (Express.js)
 Database: MongoDB
 Authentication: JWT
+
+---
+
+## 🎯 Future Improvements
+
+Real-time notifications
+Resume parsing and skill extraction
+Interview scheduling system
+Company insights and ratings
