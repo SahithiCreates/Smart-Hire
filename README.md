@@ -6,17 +6,17 @@ SmartHire is a full-stack job matching platform designed to streamline the hirin
 
 ## 📌 Overview
 
-SmartHire enables seamless interaction between candidates and recruiters by providing:
+- SmartHire enables seamless interaction between candidates and recruiters by providing:
 
-Centralized job discovery and application system
+- Centralized job discovery and application system
 
-Role-based dashboards for job seekers and recruiters
+- Role-based dashboards for job seekers and recruiters
 
-Real-time application tracking
+- Real-time application tracking
 
-Skill-based job filtering and matching
+- Skill-based job filtering and matching
 
-Secure authentication and access control
+- Secure authentication and access control
 
 ---
 
@@ -84,10 +84,10 @@ Authentication: JWT
 
 ## 🎯 Future Improvements
 
-Real-time notifications
+- Real-time notifications
 
-Resume parsing and skill extraction
+- Resume parsing and skill extraction
 
-Interview scheduling system
+- Interview scheduling system
 
-Company insights and ratings
+- Company insights and ratings
