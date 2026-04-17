@@ -23,11 +23,17 @@ SmartHire is a full-stack job matching platform designed to streamline the hirin
 ## 🏗 System Architecture
 
 Frontend (React) 
+
         │
+        
         ├── Auth Module (JWT + Role Management) 
+        
         ├── Job Module (Posting,Management) 
+        
         ├── Application Module (Apply + Status Tracking) 
+        
         ├── Matching Logic (Skill-based filtering) 
+        
         └── Dashboard (Insights + User Activity)
         
 ---
