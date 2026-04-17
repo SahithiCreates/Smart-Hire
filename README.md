@@ -22,7 +22,7 @@ SmartHire is a full-stack job matching platform designed to streamline the hirin
 
 ## 🏗 System Architecture
 
-Frontend (React) 
+        Frontend (React) 
 
         │
         
