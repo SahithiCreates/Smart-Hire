@@ -24,25 +24,34 @@ Frontend (React)
 
 **✨ Core Features**
 
-*🔐 Authentication & Authorization**
+*🔐 Authentication & Authorization*
 
 Secure login/signup using JWT
 Role-based access (Job Seeker / Recruiter)
-💼 Job Management
+
+*💼 Job Management*
+
 Recruiters can create, update, and manage job postings
 Job seekers can explore and filter job listings
-📄 Application Workflow
+
+*📄 Application Workflow*
+
 Apply to jobs through a structured system
 Track application status in real-time
 Recruiters can update candidate progress
-🔎 Smart Matching
+
+*🔎 Smart Matching*
+
 Jobs filtered based on user skills
 Improved discoverability using structured logic
 Lightweight implementation (no heavy ML models)
-📊 Dashboards
+
+*📊 Dashboards*
+
 Recruiter dashboard for managing applicants
 Job seeker dashboard for tracking applications
-⚙️ Tech Stack
+
+*⚙️ Tech Stack*
 
 Frontend: React.js, Tailwind CSS
 Backend: Node.js (Express.js)
