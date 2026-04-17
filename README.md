@@ -34,6 +34,7 @@ Frontend (React)
 
 Secure login/signup using JWT
 Role-based access (Job Seeker / Recruiter)
+
 ---
 *💼 Job Management*
 
